@@ -1,0 +1,9 @@
+- name:  Defined variable in another file and accessing at task level
+  hosts:  all
+  connection:  local
+  tasks:
+    - name:  accessing variables at task level
+      ansible.builtin.debug:
+        msg:  SSS == {{fff}}
+      vars_files:
+        - file1.yml
