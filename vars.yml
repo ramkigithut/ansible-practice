@@ -22,7 +22,7 @@
   hosts:  all
   connection:  local
   vars:
-    - file1.yml
+    - files.yml
   tasks:
     - name:  accessing variable at task level
       ansible.builtin.debug:
