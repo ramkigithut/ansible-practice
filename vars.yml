@@ -1,4 +1,4 @@
-- name: Declare variable at Play level
+- name: declaring variable at play level
   hosts: all
   connection: local
   vars:
@@ -7,3 +7,13 @@
     - name: access a variable
       ansible.builtin.debug:
         msg: xyz == {{abc}}
+
+- name:  Declaring variable at task level
+  hosts:  all
+  connection:  local
+  tasks:
+    - name:  declaring variable at play level and accessing at play level
+      ansible.builtin.debug:
+        msg: abc == {{klm}}
+      vars:
+        klm:  example.task.com
