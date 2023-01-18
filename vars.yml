@@ -28,3 +28,12 @@
       ansible.builtin.debug:
         msg:  mnm == {{efg}}
 
+- name:  Declared variable in another file and accessing at play level
+  hosts:  all
+  connection:  local
+  vars_files:
+    - file1.yml
+  tasks:
+    - name:  accessing variable at task level
+      ansible.builtin.debug:
+        msg:  sss == {{fff}}
