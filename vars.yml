@@ -1,0 +1,8 @@
+- name: Declare variable at Play level
+  hosts: all
+  vars:
+    abc: example.play.com
+  tasks:
+    - name: access a variable
+      ansible.builtin.debug:
+        msg: xyz == {{abc}}
