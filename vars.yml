@@ -42,7 +42,7 @@
   hosts:  all
   connection:  local
   tasks:
-    - name:  accessing variable at task level
+    - name:  accessing variables at task level
       ansible.builtin.debug:
         msg:  SSS == {{fff}}
       vars_files:
