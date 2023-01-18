@@ -6,7 +6,7 @@
   tasks:
     - name: access a variable
       ansible.builtin.debug:
-        msg: xyz == {{abc}}
+        msg: SSS == {{abc}}
 
 - name:  Declaring variable at task level
   hosts:  all
@@ -14,7 +14,7 @@
   tasks:
     - name:  declaring variable at task level and accessing at task level
       ansible.builtin.debug:
-        msg: abc == {{klm}}
+        msg: SSS == {{klm}}
       vars:
         klm:  example.task.com
 
@@ -26,7 +26,7 @@
   tasks:
     - name:  accessing variable at task level
       ansible.builtin.debug:
-        msg:  mnm == {{efg}}
+        msg:  SSS == {{efg}}
 
 - name:  Declared variable in another file and accessing at play level
   hosts:  all
@@ -36,4 +36,4 @@
   tasks:
     - name:  accessing variable at task level
       ansible.builtin.debug:
-        msg:  sss == {{fff}}
+        msg:  SSS == {{fff}}
