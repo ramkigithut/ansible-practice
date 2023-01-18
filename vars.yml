@@ -21,7 +21,7 @@
 - name:  Declared variable in another file and accessing at play level
   hosts:  all
   connection:  local
-  vars:
+  vars_files:
     - files.yml
   tasks:
     - name:  accessing variable at task level
