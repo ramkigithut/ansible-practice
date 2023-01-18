@@ -12,8 +12,19 @@
   hosts:  all
   connection:  local
   tasks:
-    - name:  declaring variable at play level and accessing at play level
+    - name:  declaring variable at task level and accessing at task level
       ansible.builtin.debug:
         msg: abc == {{klm}}
       vars:
         klm:  example.task.com
+
+- name:  Declared variable in another file and accessing at play level
+  hosts:  all
+  connection:  local
+  vars:
+    - file1.yml
+  tasks:
+    - name:  accessing variable at task level
+      ansible.builtin.debug:
+        msg:  mnm == {{efg}}
+
