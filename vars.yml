@@ -38,3 +38,12 @@
       ansible.builtin.debug:
         msg:  SSS == {{fff}}
 
+- name: Defined variable in another file and accessing at play level
+  hosts:  all
+  connection:  local
+  tasks:
+    - name: accessing a variable at task level defined in a file
+      ansible.builtin.debug:
+        msg:  SSS == {{efg}}
+      vars_files:
+        - files.yml
