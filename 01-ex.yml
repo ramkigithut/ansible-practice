@@ -5,5 +5,5 @@
     - name:  Defined variable in another file and accessing at task level
       ansible.builtin.debug:
         msg:  SSS == {{fff}}
-      vars_files:
+      include_vars:
         - file1.yml
