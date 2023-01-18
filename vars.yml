@@ -18,7 +18,7 @@
       vars:
         klm:  example.task.com
 
-- name:  Declared variable in another file and accessing at play level
+- name:  Defined variable in another file and accessing at play level
   hosts:  all
   connection:  local
   vars_files:
@@ -28,7 +28,7 @@
       ansible.builtin.debug:
         msg:  SSS == {{efg}}
 
-- name:  Declared variable in another file and accessing at play level
+- name:  Defined variable in another file and accessing at play level
   hosts:  all
   connection:  local
   vars_files:
@@ -37,3 +37,13 @@
     - name:  accessing variable at task level
       ansible.builtin.debug:
         msg:  SSS == {{fff}}
+
+- name:  Defined variable in another file and accessing at task level
+  hosts:  all
+  connection:  local
+  tasks:
+    - name:  accessing variable at task level
+      ansible.builtin.debug:
+        msg:  SSS == {{fff}}
+      vars_files:
+        - file1.yml
