@@ -44,7 +44,7 @@
 # tasks:
     #- name: accessing a variable at task level defined in a file
     # ansible.builtin.debug:
-      # msg:  SSS == {{efg}}
+      # msg:  efg == {{sss}}
     # vars_files:
       # - files.yml
 
