@@ -54,4 +54,4 @@
   tasks:
     - name:  accessing variable at task level
       ansible.builtin.debug:
-        msg:  kkk == {{ppp}} & bbb == {{qqq}}
+        msg:  kkk == {{ppp}} bbb == {{qqq}}
