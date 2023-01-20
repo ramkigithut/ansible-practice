@@ -55,6 +55,3 @@
     - name:  accessing variable at task level1
       ansible.builtin.debug:
         msg:  kkk == {{ppp}} bbb == {{qqq}}
-    - name: accessing variable at task level2
-      ansible.builtin.debug:
-        msg:  scn1 == {{ccc}} scn2 == {{ddd}}
