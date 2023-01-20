@@ -52,6 +52,6 @@
   hosts:  all
   connection:  local
   tasks:
-    - name: accessing variable at task level
+    - name:  accessing variable at task level
       ansible.builtin.debug:
         msg:  ppp == {{sss}}
