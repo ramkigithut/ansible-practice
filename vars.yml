@@ -55,3 +55,9 @@
     - name:  accessing variable at task level
       ansible.builtin.debug:
         msg:  ppp == {{sss}}
+
+- name:  Declaring variable from inventory file
+  hosts:  all
+  connection:  local
+  ansible.builtin.debug:
+        msg:  qqq == {{sss}}
