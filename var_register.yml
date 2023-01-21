@@ -1,0 +1,10 @@
+- name:  registering a variable
+  hosts:  all
+  connection:  local
+  tasks:
+    - name:  storing the output of shell command uptime
+      ansible.builtin.shell:  uptime
+      register:  result
+    - name:  printing the content stored in the variable result
+      ansible.builtin.debug:
+        msg:  "{{result}}"
