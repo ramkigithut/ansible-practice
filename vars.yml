@@ -55,3 +55,11 @@
     - name:  accessing variable at task level1
       ansible.builtin.debug:
         msg:  SSS5 == {{ppp}} SSS6 == {{qqq}}
+
+- name:  Accessing a fact
+  hosts:  all
+  connection:  local
+  tasks:
+    - name:  Accessing fact variable
+      ansible.builtin.debug:
+        msg:  ansible host name == {{ansible_fqdn}}
