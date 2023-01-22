@@ -1,3 +1,6 @@
 - name:  print hello world
   ansible.builtin.debug:
     msg:  hello world peace message from role
+- name:  printing  the variable defined in vars directory
+  ansible.builtin.debug:
+    msg: rrr == {{abc}}
